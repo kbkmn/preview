@@ -55,7 +55,7 @@
       <nav class="absolute left-0 top-full z-50 hidden h-[calc(100vh_-_4.375rem)] w-full grow flex-col gap-[1rem_3rem] whitespace-nowrap bg-white px-6 py-8 text-[0.875rem] font-semibold uppercase peer-data-[active='true']:flex md:static md:flex md:h-auto md:flex-row md:flex-wrap md:justify-end md:bg-transparent md:p-0 md:text-[0.75rem]">
         <ul class="flex grow flex-col gap-8 md:flex-row md:flex-wrap md:justify-end md:gap-[0.5rem_1rem]">
           <li>
-                <a href="/preview/news" title="News" class="hover:text-blue text-blue">
+                <a href="/preview/news" title="News" class="hover:text-blue">
                   News
                 </a>
               </li><li>
@@ -63,7 +63,7 @@
                   About
                 </a>
               </li><li>
-                <a href="/preview/rules" title="Rules" class="hover:text-blue">
+                <a href="/preview/rules" title="Rules" class="hover:text-blue text-blue">
                   Rules
                 </a>
               </li><li>
@@ -138,168 +138,107 @@
 </header>
 
     
-  <main class="grow bg-white bg-opacity-60 py-8 md:pb-16 md:pt-12">
-    <div class="px-4">
-      <div class="mx-auto w-full max-w-content">
-        <ul class="flex flex-wrap gap-x-4 gap-y-2 text-[0.75rem] font-semibold uppercase text-mid-gray">
+  <main class="grow">
+    <div class="pb-8 md:py-16 glide px-0 pt-6 sm:px-0 md:pt-12" data-per-view="3.5" data-gap="24">
+  
+      <div class="px-4 sm:px-16">
+        <div class="mx-auto w-full max-w-content">
+          <ul class="flex flex-wrap gap-x-4 gap-y-2 text-[0.75rem] font-semibold uppercase text-mid-gray">
   <li class="relative [&:not(:last-child)]:pr-6 [&:not(:last-child)]:after:absolute [&:not(:last-child)]:after:right-0 [&:not(:last-child)]:after:top-1/2 [&:not(:last-child)]:after:-translate-y-1/2 [&:not(:last-child)]:after:content-['/']">
     <a href="/" title="" class="text-mid-gray hover:text-blue">Home</a>
   </li>
 
   <li class="relative [&:not(:last-child)]:pr-6 [&:not(:last-child)]:after:absolute [&:not(:last-child)]:after:right-0 [&:not(:last-child)]:after:top-1/2 [&:not(:last-child)]:after:-translate-y-1/2 [&:not(:last-child)]:after:content-['/']">
-        <span class="text-black">News</span>
+        <span class="text-black">Rules</span>
       </li>
 </ul>
 
-        <div class="mt-6 grid grid-cols-2 items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
-          <div class="whitespace-nowrap">
-            <h1 class="text-[1.5rem] font-bold leading-9">News</h1>
-          </div>
+          <div class="mt-6 flex items-center gap-8">
+            <h3 class="text-[1.25rem] font-semibold leading-[1.75rem] md:text-[1.5rem] md:font-bold md:leading-[2.25rem]">
+  Rules
+</h3>
 
-          <div class="col-span-2 row-start-2 mx-auto whitespace-nowrap text-balance md:col-span-1 md:row-start-auto">
-            <a href="#!" title="More news" class="text-[0.75rem] font-semibold uppercase text-blue transition-colors hover:text-black">More news on the website of the Association</a>
-          </div>
+            <div class="ml-auto flex items-center gap-2 fill-black md:ml-0" data-glide-el="controls">
+  <button class="glide__arrow glide__arrow--left flex h-6 w-6 rotate-180 items-center justify-center transition-colors hover:fill-blue" data-glide-dir="<">
+    <svg width="17" height="12" viewBox="0 0 17 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.5303 6.36822C16.8232 6.07533 16.8232 5.60045 16.5303 5.30756L11.7574 0.53459C11.4645 0.241696 10.9896 0.241696 10.6967 0.53459C10.4038 0.827483 10.4038 1.30236 10.6967 1.59525L14.9393 5.83789L10.6967 10.0805C10.4038 10.3734 10.4038 10.8483 10.6967 11.1412C10.9896 11.4341 11.4645 11.4341 11.7574 11.1412L16.5303 6.36822ZM0 6.58789H16V5.08789H0V6.58789Z"></path>
+    </svg>
+  </button>
 
-          <div class="justify-self-end">
-            <button data-dialog="subscribe-dialog" role="button" class="flex h-[2.25rem] items-center justify-center rounded-full border border-pink px-6 text-[0.75rem] font-semibold uppercase text-pink transition-colors hover:bg-pink hover:text-white">Subscribe</button>
+  <button class="glide__arrow glide__arrow--right flex h-6 w-6 items-center justify-center transition-all hover:fill-blue" data-glide-dir=">">
+    <svg width="17" height="12" viewBox="0 0 17 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.5303 6.36822C16.8232 6.07533 16.8232 5.60045 16.5303 5.30756L11.7574 0.53459C11.4645 0.241696 10.9896 0.241696 10.6967 0.53459C10.4038 0.827483 10.4038 1.30236 10.6967 1.59525L14.9393 5.83789L10.6967 10.0805C10.4038 10.3734 10.4038 10.8483 10.6967 11.1412C10.9896 11.4341 11.4645 11.4341 11.7574 11.1412L16.5303 6.36822ZM0 6.58789H16V5.08789H0V6.58789Z"></path>
+    </svg>
+  </button>
+</div>
           </div>
         </div>
-
-        <ul class="mt-12 flex flex-col gap-4">
-          <li>
-  <a href="/preview/news/news-slug-1" title="" class="group flex h-full select-none flex-col gap-8 rounded-2xl bg-white fill-gray-light p-8 transition-colors transition-opacity hover:fill-blue md:gap-11">
-    <div class="flex grow flex-col gap-4 md:gap-[1.125rem]">
-      <div class="flex flex-col gap-4">
-        <time datetime="2017-02-14" class="text-[0.75rem] font-medium leading-7 text-mid-gray md:text-[1rem]">
-  12 april
-</time>
-
-        <h2 class="text-[1.125rem] font-bold leading-[1.625rem] transition-colors group-hover:text-blue md:text-[1.5rem] md:leading-9">
-          Russian Ministry of Education and Science defines vectors of co-operation with relevant Cambodian departments
-        </h2>
       </div>
 
-      <div class="text-[0.875rem] font-medium leading-[1.5rem] md:text-[1rem] md:leading-7">
-        <p>Staff training in Russian universities, development of academic mobility and expansion of inter-university co-operation were discussed during talks with Mak Ngoi, Director General for Higher Education of the Ministry of Education</p>
-      </div>
-    </div>
+      <div class="glide__bullets mt-4 flex gap-4 px-4 md:hidden" data-glide-el="controls[nav]">
+  <button class="glide__bullet h-[0.125rem] grow basis-0 rounded-full bg-[#D8D8D8]" data-glide-dir="=0"></button><button class="glide__bullet h-[0.125rem] grow basis-0 rounded-full bg-[#D8D8D8]" data-glide-dir="=1"></button><button class="glide__bullet h-[0.125rem] grow basis-0 rounded-full bg-[#D8D8D8]" data-glide-dir="=2"></button><button class="glide__bullet h-[0.125rem] grow basis-0 rounded-full bg-[#D8D8D8]" data-glide-dir="=3"></button>
+</div>
 
-    <div>
-      <svg width="41" height="10" viewBox="0 0 41 10" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40.4666 5.0627C40.7016 4.82771 40.7016 4.44671 40.4666 4.21171L36.6371 0.382252C36.4022 0.147257 36.0212 0.147257 35.7862 0.382252C35.5512 0.617247 35.5512 0.998248 35.7862 1.23324L39.1901 4.63721L35.7862 8.04117C35.5512 8.27617 35.5512 8.65717 35.7862 8.89216C36.0212 9.12716 36.4022 9.12716 36.6371 8.89216L40.4666 5.0627ZM0.326172 5.23895H40.0411V4.03547H0.326172V5.23895Z"></path>
+      <div class="glide__track mt-6 overflow-clip md:mt-[2.125rem]" data-glide-el="track">
+        <ul class="glide__slides flex md:pl-[calc((100vw_-_81.5rem)_/_2)]">
+          <li class="glide__slide w-[calc(100vw_-_2rem)] shrink-0 px-4 md:w-[18rem] md:px-0">
+  <a href="" title="Download Demo version" download class="flex h-full flex-col gap-4 rounded-[1rem] bg-white p-6">
+    <div class="text-[1.5rem] font-bold leading-9">Demo version</div>
+
+    <div class="grow text-[1rem] font-medium leading-6">Training tasks similar to those, you will face with at the second round of the competition.</div>
+
+    <div class="h-[1.5rem] w-[1.25rem] shrink-0">
+      <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.4371 0C9.1 0 8.82419 0.24 8.82419 0.533333V17.0667L3.83516 13.4667C3.57774 13.2747 3.19161 13.296 2.97097 13.5147C2.75032 13.7387 2.77484 14.0747 3.02613 14.2667L9.03258 18.64C9.13677 18.72 9.27774 18.7733 9.42484 18.7733C9.42484 18.7733 9.42484 18.7733 9.43097 18.7733H9.4371C9.59032 18.7733 9.72516 18.72 9.82935 18.64L15.8358 14.2667C16.0932 14.0747 16.1177 13.7333 15.891 13.5147C15.6703 13.2907 15.2781 13.2693 15.0268 13.4667L10.0377 17.0667V0.533333C10.0377 0.24 9.76193 0 9.42484 0H9.4371Z" fill="#A4A4A4"></path>
+        <path d="M0 23.36C0 23.6534 0.275806 23.8934 0.612903 23.8934H18.2645C18.6016 23.8934 18.8774 23.6534 18.8774 23.36C18.8774 23.0667 18.6016 22.8267 18.2645 22.8267H0.612903C0.275806 22.8267 0 23.0667 0 23.36Z" fill="#A4A4A4"></path>
       </svg>
     </div>
   </a>
-</li><li>
-  <a href="/preview/news/news-slug-1" title="" class="group flex h-full select-none flex-col gap-8 rounded-2xl bg-white fill-gray-light p-8 transition-colors transition-opacity hover:fill-blue md:gap-11">
-    <div class="flex grow flex-col gap-4 md:gap-[1.125rem]">
-      <div class="flex flex-col gap-4">
-        <time datetime="2017-02-14" class="text-[0.75rem] font-medium leading-7 text-mid-gray md:text-[1rem]">
-  5 april
-</time>
+</li><li class="glide__slide w-[calc(100vw_-_2rem)] shrink-0 px-4 md:w-[18rem] md:px-0">
+  <a href="" title="Download Program of Subject Area" download class="flex h-full flex-col gap-4 rounded-[1rem] bg-white p-6">
+    <div class="text-[1.5rem] font-bold leading-9">Program of Subject Area</div>
 
-        <h2 class="text-[1.125rem] font-bold leading-[1.625rem] transition-colors group-hover:text-blue md:text-[1.5rem] md:leading-9">
-          Russia intensifies co-operation with the International Institute for Central Asian Studies
-        </h2>
-      </div>
+    <div class="grow text-[1rem] font-medium leading-6">Program outline.</div>
 
-      <div class="text-[0.875rem] font-medium leading-[1.5rem] md:text-[1rem] md:leading-7">
-        <p>Staff training in Russian universities, development of academic mobility and expansion of inter-university co-operation were discussed during talks with Mak Ngoi, Director General for Higher Education of the Ministry of Education Staff training in Russian universities, development of academic mobility and expansion of inter-university co-operation were discussed ...</p>
-      </div>
-    </div>
-
-    <div>
-      <svg width="41" height="10" viewBox="0 0 41 10" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40.4666 5.0627C40.7016 4.82771 40.7016 4.44671 40.4666 4.21171L36.6371 0.382252C36.4022 0.147257 36.0212 0.147257 35.7862 0.382252C35.5512 0.617247 35.5512 0.998248 35.7862 1.23324L39.1901 4.63721L35.7862 8.04117C35.5512 8.27617 35.5512 8.65717 35.7862 8.89216C36.0212 9.12716 36.4022 9.12716 36.6371 8.89216L40.4666 5.0627ZM0.326172 5.23895H40.0411V4.03547H0.326172V5.23895Z"></path>
+    <div class="h-[1.5rem] w-[1.25rem] shrink-0">
+      <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.4371 0C9.1 0 8.82419 0.24 8.82419 0.533333V17.0667L3.83516 13.4667C3.57774 13.2747 3.19161 13.296 2.97097 13.5147C2.75032 13.7387 2.77484 14.0747 3.02613 14.2667L9.03258 18.64C9.13677 18.72 9.27774 18.7733 9.42484 18.7733C9.42484 18.7733 9.42484 18.7733 9.43097 18.7733H9.4371C9.59032 18.7733 9.72516 18.72 9.82935 18.64L15.8358 14.2667C16.0932 14.0747 16.1177 13.7333 15.891 13.5147C15.6703 13.2907 15.2781 13.2693 15.0268 13.4667L10.0377 17.0667V0.533333C10.0377 0.24 9.76193 0 9.42484 0H9.4371Z" fill="#A4A4A4"></path>
+        <path d="M0 23.36C0 23.6534 0.275806 23.8934 0.612903 23.8934H18.2645C18.6016 23.8934 18.8774 23.6534 18.8774 23.36C18.8774 23.0667 18.6016 22.8267 18.2645 22.8267H0.612903C0.275806 22.8267 0 23.0667 0 23.36Z" fill="#A4A4A4"></path>
       </svg>
     </div>
   </a>
-</li><li>
-  <a href="/preview/news/news-slug-1" title="" class="group flex h-full select-none flex-col gap-8 rounded-2xl bg-white fill-gray-light p-8 transition-colors transition-opacity hover:fill-blue md:gap-11">
-    <div class="flex grow flex-col gap-4 md:gap-[1.125rem]">
-      <div class="flex flex-col gap-4">
-        <time datetime="2017-02-14" class="text-[0.75rem] font-medium leading-7 text-mid-gray md:text-[1rem]">
-  5 april
-</time>
+</li><li class="glide__slide w-[calc(100vw_-_2rem)] shrink-0 px-4 md:w-[18rem] md:px-0">
+  <a href="" title="Download Interview outline" download class="flex h-full flex-col gap-4 rounded-[1rem] bg-white p-6">
+    <div class="text-[1.5rem] font-bold leading-9">Interview outline</div>
 
-        <h2 class="text-[1.125rem] font-bold leading-[1.625rem] transition-colors group-hover:text-blue md:text-[1.5rem] md:leading-9">
-          Russia intensifies co-operation with the International Institute for Central Asian
-        </h2>
-      </div>
+    <div class="grow text-[1rem] font-medium leading-6">For doctoral track’s participants only</div>
 
-      <div class="text-[0.875rem] font-medium leading-[1.5rem] md:text-[1rem] md:leading-7">
-        <p>Staff training in Russian universities, development of academic mobility and expansion of inter-university co-operation were discussed during talks with Mak Ngoi, Director General for Higher Education of the Ministry of Education Staff training in Russian universities, development of academic mobility and </p>
-      </div>
+    <div class="h-[1.5rem] w-[1.25rem] shrink-0">
+      <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.4371 0C9.1 0 8.82419 0.24 8.82419 0.533333V17.0667L3.83516 13.4667C3.57774 13.2747 3.19161 13.296 2.97097 13.5147C2.75032 13.7387 2.77484 14.0747 3.02613 14.2667L9.03258 18.64C9.13677 18.72 9.27774 18.7733 9.42484 18.7733C9.42484 18.7733 9.42484 18.7733 9.43097 18.7733H9.4371C9.59032 18.7733 9.72516 18.72 9.82935 18.64L15.8358 14.2667C16.0932 14.0747 16.1177 13.7333 15.891 13.5147C15.6703 13.2907 15.2781 13.2693 15.0268 13.4667L10.0377 17.0667V0.533333C10.0377 0.24 9.76193 0 9.42484 0H9.4371Z" fill="#A4A4A4"></path>
+        <path d="M0 23.36C0 23.6534 0.275806 23.8934 0.612903 23.8934H18.2645C18.6016 23.8934 18.8774 23.6534 18.8774 23.36C18.8774 23.0667 18.6016 22.8267 18.2645 22.8267H0.612903C0.275806 22.8267 0 23.0667 0 23.36Z" fill="#A4A4A4"></path>
+      </svg>
     </div>
+  </a>
+</li><li class="glide__slide w-[calc(100vw_-_2rem)] shrink-0 px-4 md:w-[18rem] md:px-0">
+  <a href="" title="Download List of potential scientific supervisors" download class="flex h-full flex-col gap-4 rounded-[1rem] bg-white p-6">
+    <div class="text-[1.5rem] font-bold leading-9">List of potential scientific supervisors</div>
 
-    <div>
-      <svg width="41" height="10" viewBox="0 0 41 10" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40.4666 5.0627C40.7016 4.82771 40.7016 4.44671 40.4666 4.21171L36.6371 0.382252C36.4022 0.147257 36.0212 0.147257 35.7862 0.382252C35.5512 0.617247 35.5512 0.998248 35.7862 1.23324L39.1901 4.63721L35.7862 8.04117C35.5512 8.27617 35.5512 8.65717 35.7862 8.89216C36.0212 9.12716 36.4022 9.12716 36.6371 8.89216L40.4666 5.0627ZM0.326172 5.23895H40.0411V4.03547H0.326172V5.23895Z"></path>
+    <div class="grow text-[1rem] font-medium leading-6">For doctoral track’s participants only</div>
+
+    <div class="h-[1.5rem] w-[1.25rem] shrink-0">
+      <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.4371 0C9.1 0 8.82419 0.24 8.82419 0.533333V17.0667L3.83516 13.4667C3.57774 13.2747 3.19161 13.296 2.97097 13.5147C2.75032 13.7387 2.77484 14.0747 3.02613 14.2667L9.03258 18.64C9.13677 18.72 9.27774 18.7733 9.42484 18.7733C9.42484 18.7733 9.42484 18.7733 9.43097 18.7733H9.4371C9.59032 18.7733 9.72516 18.72 9.82935 18.64L15.8358 14.2667C16.0932 14.0747 16.1177 13.7333 15.891 13.5147C15.6703 13.2907 15.2781 13.2693 15.0268 13.4667L10.0377 17.0667V0.533333C10.0377 0.24 9.76193 0 9.42484 0H9.4371Z" fill="#A4A4A4"></path>
+        <path d="M0 23.36C0 23.6534 0.275806 23.8934 0.612903 23.8934H18.2645C18.6016 23.8934 18.8774 23.6534 18.8774 23.36C18.8774 23.0667 18.6016 22.8267 18.2645 22.8267H0.612903C0.275806 22.8267 0 23.0667 0 23.36Z" fill="#A4A4A4"></path>
       </svg>
     </div>
   </a>
 </li>
         </ul>
       </div>
-    </div>
+    
+</div>
   </main>
-
-  
-  <dialog id="subscribe-dialog" class="w-full bg-transparent backdrop:bg-black backdrop:bg-opacity-60">
-    <form action="" method="post" class="mx-auto flex w-full max-w-[44.25rem] flex-col gap-4 rounded-[1rem] bg-white p-6 md:p-8">
-      <div class="flex items-center justify-between">
-        <h2 class="text-[1.25rem] font-semibold text-gray-dark">
-          Subscribe to newsletter
-        </h2>
-
-        <button class="close flex h-9 w-9 items-center justify-center"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.1744 9.49899L18.651 2.03423C18.8745 1.81075 19 1.50766 19 1.19162C19 0.875585 18.8745 0.572491 18.651 0.349018C18.4275 0.125546 18.1244 0 17.8084 0C17.4923 0 17.1892 0.125546 16.9658 0.349018L9.50101 7.82565L2.03625 0.349018C1.81278 0.125546 1.50969 2.80593e-07 1.19365 2.82947e-07C0.87761 2.85302e-07 0.574516 0.125546 0.351043 0.349018C0.127571 0.572491 0.00202562 0.875585 0.00202562 1.19162C0.00202562 1.50766 0.127571 1.81075 0.351043 2.03423L7.82767 9.49899L0.351043 16.9637C0.23981 17.0741 0.151521 17.2053 0.0912708 17.35C0.0310203 17.4946 0 17.6497 0 17.8064C0 17.963 0.0310203 18.1181 0.0912708 18.2628C0.151521 18.4074 0.23981 18.5386 0.351043 18.649C0.461369 18.7602 0.592626 18.8485 0.737245 18.9087C0.881863 18.969 1.03698 19 1.19365 19C1.35031 19 1.50543 18.969 1.65005 18.9087C1.79467 18.8485 1.92593 18.7602 2.03625 18.649L9.50101 11.1723L16.9658 18.649C17.0761 18.7602 17.2074 18.8485 17.352 18.9087C17.4966 18.969 17.6517 19 17.8084 19C17.965 19 18.1202 18.969 18.2648 18.9087C18.4094 18.8485 18.5407 18.7602 18.651 18.649C18.7622 18.5386 18.8505 18.4074 18.9108 18.2628C18.971 18.1181 19.002 17.963 19.002 17.8064C19.002 17.6497 18.971 17.4946 18.9108 17.35C18.8505 17.2053 18.7622 17.0741 18.651 16.9637L11.1744 9.49899Z" fill="#2D2D37"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- <div class="flex flex-col gap-6">
-        <div><p>Thank you for subscribing to our newsletter. You'll now receive the latest updates, news, and special offers directly in your inbox. We appreciate your interest and look forward to staying connected!</p></div>
-
-        <div class="flex gap-2 md:justify-end">
-          <button
-            class="close flex h-[2.25rem] grow basis-0 items-center justify-center rounded-full border border-pink px-6 text-[0.75rem] font-semibold uppercase text-pink transition-colors md:grow-0 md:hover:bg-pink md:hover:text-white"
-          >
-            Ok
-          </button>
-        </div>
-      </div> -->
-
-      <div class="flex flex-col gap-6">
-        <div class="text-[0.75rem] font-semibold leading-[0.875rem]">
-          <ul class="flex flex-col gap-5">
-            <li data-invalid="true" class="group flex flex-col gap-3">
-              <label for="subscribe-email" class="uppercase text-mid-gray">Email</label>
-
-              <input type="email" class="h-[2.25rem] rounded-[0.5rem] border border-mid-gray px-4 outline-none group-data-[invalid='true']:border-red group-data-[invalid='true']:text-red" id="subscribe-email">
-
-              <p class="leading-5 text-red">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt ad rerum optio, ullam, dolores quo dolorem autem quis
-                illum impedit itaque nulla corrupti odio voluptatum earum illo
-                distinctio quibusdam eligendi.
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="flex gap-2 md:justify-end">
-          <button type="reset" class="close flex h-[2.25rem] grow basis-0 items-center justify-center rounded-full border border-gray-light px-6 text-[0.75rem] font-semibold uppercase text-gray-light transition-opacity md:grow-0 md:hover:opacity-60">
-            Cancel
-          </button>
-
-          <button type="submit" class="flex h-[2.25rem] grow basis-0 items-center justify-center rounded-full border border-pink px-6 text-[0.75rem] font-semibold uppercase text-pink transition-colors md:grow-0 md:hover:bg-pink md:hover:text-white">
-            Subscribe
-          </button>
-        </div>
-      </div>
-    </form>
-  </dialog>
 
 
     <footer>
