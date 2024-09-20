@@ -4,6 +4,26 @@ const GAP = 24;
 const PEEK = 16;
 
 (function () {
+  document.querySelectorAll("[data-modal]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const id = button.getAttribute("data-modal");
+      if (!id) return;
+
+      const modal = document.getElementById(id);
+      if (!modal) return;
+
+      modal.showModal();
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.close();
+        }
+      });
+    });
+  });
+})();
+
+(function () {
   const carousel = document.querySelector(".carousel");
 
   if (!carousel) return;
