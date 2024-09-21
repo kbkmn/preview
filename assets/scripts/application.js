@@ -1,8 +1,3 @@
-const CONTENT_WIDTH = 1152;
-const PADDING = 16;
-const GAP = 24;
-const PEEK = 16;
-
 (function () {
   document.querySelectorAll("[data-modal]").forEach(function (button) {
     button.addEventListener("click", function () {
@@ -24,6 +19,73 @@ const PEEK = 16;
 })();
 
 (function () {
+  const faq = document.getElementById("faq");
+
+  if (!faq) return;
+
+  const sections = faq?.querySelectorAll(".section");
+
+  (function () {
+    sections?.forEach((section, section_idx) => {
+      section.addEventListener("click", () => {
+        openFaqSection(section_idx);
+      });
+
+      const items = section.nextElementSibling?.querySelectorAll("ul > li");
+
+      items?.forEach((item, item_idx) => {
+        item.querySelector("button")?.addEventListener("click", () => {
+          const section_text = section.nextElementSibling;
+          if (!section_text) return;
+          toggleFaqSectionItem(section_text, item_idx);
+        });
+      });
+    });
+  })();
+
+  function openFaqSection(idx) {
+    sections?.forEach((section, section_idx) => {
+      if (section_idx === idx) {
+        section.dataset.active = "true";
+      } else {
+        delete section.dataset.active;
+      }
+    });
+  }
+
+  function toggleFaqSectionItem(wrapper, idx) {
+    const items = wrapper.querySelectorAll("ul > li");
+
+    items?.forEach((item, item_idx) => {
+      const wrapper = item.querySelector("div");
+      const text = wrapper?.querySelector("div");
+      if (!wrapper || !text) return;
+
+      if (item_idx === idx && !item.dataset.active) {
+        item.dataset.active = "true";
+        wrapper.style.height = text.clientHeight + "px";
+        wrapper.style.opacity = "1";
+      } else {
+        delete item.dataset.active;
+
+        if (wrapper.style.height === "") {
+          wrapper.style.height = text.clientHeight + "px";
+        }
+
+        setTimeout(() => {
+          wrapper.style.height = "0";
+          wrapper.style.opacity = "0";
+        }, 0);
+      }
+    });
+  }
+})();
+
+(function () {
+  const CONTENT_WIDTH = 1152;
+  const PADDING = 16;
+  const GAP = 24;
+
   const carousel = document.querySelector(".carousel");
 
   if (!carousel) return;
