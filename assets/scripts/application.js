@@ -82,6 +82,31 @@
 })();
 
 (function () {
+  const MOBILE_WIDTH = 768;
+
+  const menu = document.getElementById("side-menu");
+
+  if (!menu) return;
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (window.innerWidth >= MOBILE_WIDTH) return;
+
+      event.stopPropagation();
+
+      if (menu.dataset.active != "true") {
+        event.preventDefault();
+        menu.dataset.active = "true";
+      }
+    });
+  });
+
+  document.addEventListener("click", () => {
+    menu.dataset.active = "false";
+  });
+})();
+
+(function () {
   const CONTENT_WIDTH = 1152;
   const PADDING = 16;
   const GAP = 24;
