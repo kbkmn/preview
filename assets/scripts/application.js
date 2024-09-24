@@ -4,6 +4,11 @@
       const id = button.getAttribute("data-modal");
       if (!id) return;
 
+      const openedDialog = document.querySelector("dialog[open]");
+      if (openedDialog) {
+        openedDialog.close();
+      }
+
       const modal = document.getElementById(id);
       if (!modal) return;
 
@@ -103,6 +108,26 @@
 
   document.addEventListener("click", () => {
     menu.dataset.active = "false";
+  });
+})();
+
+(function () {
+  const filter = document.getElementById("filter");
+
+  if (!filter) return;
+
+  const input = filter.querySelector("input[type='text']");
+  const values = filter.querySelectorAll("[data-value]");
+
+  input.addEventListener("input", function (event) {
+    const inputValue = event.currentTarget.value.toLowerCase();
+
+    values.forEach(function (element) {
+      const value = element.getAttribute("data-value");
+      const display = !inputValue || value.toLowerCase().includes(inputValue);
+
+      element.style.display = display ? "block" : "none";
+    });
   });
 })();
 
