@@ -4,10 +4,9 @@
       const id = button.getAttribute("data-modal");
       if (!id) return;
 
-      const openedDialog = document.querySelector("dialog[open]");
-      if (openedDialog) {
-        openedDialog.close();
-      }
+      document.querySelectorAll("dialog[open]").forEach(function (dialog) {
+        dialog.close();
+      });
 
       const modal = document.getElementById(id);
       if (!modal) return;
