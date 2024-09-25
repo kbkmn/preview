@@ -1,4 +1,15 @@
 (function () {
+  const header = document.getElementById("header");
+  const hamburger = document.getElementById("hamburger");
+
+  hamburger?.addEventListener("click", () => {
+    if (!header) return;
+
+    header.dataset.open = header.dataset.open === "true" ? "false" : "true";
+  });
+})();
+
+(function () {
   document.querySelectorAll("[data-modal]").forEach(function (button) {
     button.addEventListener("click", function () {
       const id = button.getAttribute("data-modal");
