@@ -127,18 +127,20 @@
   if (!filter) return;
 
   const input = filter.querySelector("input[type='text']");
-  const values = filter.querySelectorAll("[data-value]");
 
   input.addEventListener("input", function (event) {
-    const inputValue = event.currentTarget.value.toLowerCase();
+    toggleElements(event.currentTarget.value);
+  });
 
-    values.forEach(function (element) {
+  function toggleElements(input) {
+    filter.querySelectorAll("[data-value]").forEach(function (element) {
       const value = element.getAttribute("data-value");
-      const display = !inputValue || value.toLowerCase().includes(inputValue);
+      const display =
+        !input || value.toLowerCase().includes(input.toLowerCase());
 
       element.style.display = display ? "block" : "none";
     });
-  });
+  }
 })();
 
 (function () {
