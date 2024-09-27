@@ -144,6 +144,19 @@
 })();
 
 (function () {
+  document.querySelectorAll(".toggle-password").forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const input = button.previousElementSibling;
+      if (!input || input.tagName !== "INPUT") return;
+
+      input.type = input.type === "password" ? "text" : "password";
+    });
+  });
+})();
+
+(function () {
   const CONTENT_WIDTH = 1152;
   const PADDING = 16;
   const GAP = 24;
