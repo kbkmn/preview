@@ -157,6 +157,43 @@
 })();
 
 (function () {
+  document.querySelectorAll(".close-notification").forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const wrapper = e.target.closest("li");
+      if (!wrapper) return;
+
+      wrapper.style.maxHeight = wrapper.offsetHeight + "px";
+
+      setTimeout(() => {
+        wrapper.style.maxHeight = "0";
+      }, 100);
+
+      const formData = new FormData(form);
+      const method = form.method || "GET";
+      const action = form.action || window.location.href;
+
+      const xhr = new XMLHttpRequest();
+      xhr.open(method, action, true);
+
+      xhr.setRequestHeader("Accept", "application/json");
+      if (method.toUpperCase() !== "GET") {
+        xhr.setRequestHeader("Content-Type", "application/json");
+      }
+
+      if (method.toUpperCase() === "GET") {
+        const urlParams = new URLSearchParams(formData).toString();
+        xhr.send(null);
+        xhr.open(method, `${action}?${urlParams}`, true);
+      } else {
+        xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
+      }
+    });
+  });
+})();
+
+(function () {
   const CONTENT_WIDTH = 1152;
   const PADDING = 16;
   const GAP = 24;
