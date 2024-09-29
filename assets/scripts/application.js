@@ -10,6 +10,12 @@
 })();
 
 (function () {
+  document
+    .querySelectorAll("dialog[data-open=true]")
+    .forEach(function (dialog) {
+      dialog.showModal();
+    });
+
   document.querySelectorAll("[data-modal]").forEach(function (button) {
     button.addEventListener("click", function () {
       const id = button.getAttribute("data-modal");
@@ -157,6 +163,16 @@
 })();
 
 (function () {
+  document.querySelectorAll(".favourites-form").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      form.dataset.active = form.dataset.active === "true" ? "false" : "true";
+
+      sendForm(form);
+    });
+  });
+
   document.querySelectorAll(".close-notification").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -170,27 +186,31 @@
         wrapper.style.maxHeight = "0";
       }, 100);
 
-      const formData = new FormData(form);
-      const method = form.method || "GET";
-      const action = form.action || window.location.href;
-
-      const xhr = new XMLHttpRequest();
-      xhr.open(method, action, true);
-
-      xhr.setRequestHeader("Accept", "application/json");
-      if (method.toUpperCase() !== "GET") {
-        xhr.setRequestHeader("Content-Type", "application/json");
-      }
-
-      if (method.toUpperCase() === "GET") {
-        const urlParams = new URLSearchParams(formData).toString();
-        xhr.send(null);
-        xhr.open(method, `${action}?${urlParams}`, true);
-      } else {
-        xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
-      }
+      sendForm(form);
     });
   });
+
+  function sendForm(form) {
+    const formData = new FormData(form);
+    const method = form.method || "GET";
+    const action = form.action || window.location.href;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, action, true);
+
+    xhr.setRequestHeader("Accept", "application/json");
+    if (method.toUpperCase() !== "GET") {
+      xhr.setRequestHeader("Content-Type", "application/json");
+    }
+
+    if (method.toUpperCase() === "GET") {
+      const urlParams = new URLSearchParams(formData).toString();
+      xhr.send(null);
+      xhr.open(method, `${action}?${urlParams}`, true);
+    } else {
+      xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
+    }
+  }
 })();
 
 (function () {
