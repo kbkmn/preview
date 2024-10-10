@@ -253,14 +253,16 @@
   });
 
   function getPeek() {
+    const maxContentSize = Math.min(1280, window.innerWidth);
+
     return {
       before:
-        window.innerWidth > CONTENT_WIDTH + PADDING * 2
-          ? (window.innerWidth - CONTENT_WIDTH) / 2
+        maxContentSize > CONTENT_WIDTH + PADDING * 2
+          ? (maxContentSize - CONTENT_WIDTH) / 2
           : PADDING,
       after:
-        window.innerWidth > CONTENT_WIDTH + PADDING * 2 + GAP
-          ? (window.innerWidth - CONTENT_WIDTH) / 2
+        maxContentSize > CONTENT_WIDTH + PADDING * 2 + GAP
+          ? (maxContentSize - CONTENT_WIDTH) / 2
           : PADDING + GAP,
     };
   }
