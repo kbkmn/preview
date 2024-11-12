@@ -248,12 +248,12 @@
 
   glide.on("resize", function () {
     glide.update({
-      peek: getPeek(),
+      peek: getPeek(carousel.clientWidth),
     });
   });
 
-  function getPeek() {
-    const maxContentSize = Math.min(1280, window.innerWidth);
+  function getPeek(maxWidth) {
+    const maxContentSize = Math.min(maxWidth, window.innerWidth);
 
     return {
       before:
