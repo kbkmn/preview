@@ -255,12 +255,12 @@
     </div>
 
     <ul class="flex flex-col gap-6">
-      <li data-map="{&#34;region&#34;:&#34;Белгородская область&#34;,&#34;address&#34;:&#34;288 Hoeger Lights&#34;,&#34;coordinates&#34;:[79.0236,96.8169]}">
+      <li data-map="{&#34;region&#34;:&#34;Хабаровский край&#34;,&#34;address&#34;:&#34;1166 Fannie Spurs&#34;,&#34;coordinates&#34;:[55.8299,47.7462]}">
             <div class="flex flex-col gap-4 rounded-lg bg-white p-6">
   <ul class="flex flex-wrap gap-1">
   <li>
         <span class="flex h-[1.5rem] items-center rounded-lg border border-transparent bg-navy-blue bg-opacity-5 px-2 text-[0.75rem] leading-none text-navy-blue transition-colors">
-  Астрономия
+  Физика
 </span>
       </li>
 </ul>
@@ -290,12 +290,20 @@
     </div>
   </div>
 </div>
-          </li><li data-map="{&#34;region&#34;:&#34;Калининградская область&#34;,&#34;address&#34;:&#34;4121 N Center Street&#34;,&#34;coordinates&#34;:[45.5153,32.8195]}">
+          </li><li data-map="{&#34;region&#34;:&#34;Тульская область&#34;,&#34;address&#34;:&#34;2971 Theodore Row&#34;,&#34;coordinates&#34;:[59.5204,155.834]}">
             <div class="flex flex-col gap-4 rounded-lg bg-white p-6">
   <ul class="flex flex-wrap gap-1">
   <li>
         <span class="flex h-[1.5rem] items-center rounded-lg border border-transparent bg-navy-blue bg-opacity-5 px-2 text-[0.75rem] leading-none text-navy-blue transition-colors">
+  Астрономия
+</span>
+      </li><li>
+        <span class="flex h-[1.5rem] items-center rounded-lg border border-transparent bg-navy-blue bg-opacity-5 px-2 text-[0.75rem] leading-none text-navy-blue transition-colors">
   Физика
+</span>
+      </li><li>
+        <span class="flex h-[1.5rem] items-center rounded-lg border border-transparent bg-navy-blue bg-opacity-5 px-2 text-[0.75rem] leading-none text-navy-blue transition-colors">
+  Геометрия
 </span>
       </li>
 </ul>
@@ -484,16 +492,23 @@
     <fieldset class="flex flex-col gap-8">
       <div class="flex flex-col gap-4">
         <ul class="flex flex-col gap-6">
-          <li class="flex flex-col gap-2 text-[0.875rem] group/input">
+          <li class="flex flex-col gap-2 text-[0.875rem]">
   <label for="region" class="leading-5">Регион</label>
 
   <div class="relative">
-    <input id="region" type="text" placeholder="Регион" class="peer h-11 w-full rounded-lg border border-gray px-4 placeholder:text-mid-gray group-data-[invalid=true]/input:border-red">
+    <select id="region" required class="peer relative z-10 h-11 w-full appearance-none rounded-lg border border-gray bg-transparent bg-center px-4 pr-8">
+      <option disabled selected hidden></option>
+      <option value="Регион #1">Регион #1</option><option value="Регион #2">Регион #2</option><option value="Регион #3">Регион #3</option>
+    </select>
 
-    
+    <div class="absolute top-1/2 hidden -translate-y-1/2 px-4 text-[0.875rem] text-mid-gray peer-invalid:block">
+      Регион
+    </div>
+
+    <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 -translate-y-1/2">
+      <path d="M4.99992 4.99992L0.833252 0.833252H9.16659L4.99992 4.99992Z" fill="#292A2E"></path>
+    </svg>
   </div>
-
-  
 </li>
 
           <li class="flex flex-col gap-2 text-[0.875rem] group/input">
@@ -701,7 +716,7 @@
     
 
     <script src="/preview/assets/scripts/glide.min.js"></script>
-    <script src="/preview/assets/scripts/application.js?1733309040733"></script>
+    <script src="/preview/assets/scripts/application.js?1733398754436"></script>
   </body>
 </html>
 
